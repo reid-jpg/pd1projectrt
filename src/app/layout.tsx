@@ -15,7 +15,29 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${GeistSans.variable}`}>
-        <div className="text-rose-400 text-3xl">First Layout</div>
+        <div className="text-rose-400 text-7xl text-center">First Layout</div>
+        <div>
+        <button className="btn btn-outline btn-error">Like & Subscribe</button>
+        </div>
+        <label className="swap swap-flip text-9xl text-center">
+          <input type="checkbox" />
+          <div className="swap-on">are trash</div>
+          <div className="swap-off">u</div>
+        </label>
+        <div className="card bg-base-100 w-96 shadow-xl">
+          <figure>
+            <img
+            src="https://utfs.io/f/0641906e-55df-45ec-b1c8-514fe3914611-1ody.jpg"
+            alt="things" />
+          </figure>
+        <div className="card-body">
+          <h2 className="card-title text-primary">D-D-D-D-D-Dora!</h2>
+          <p>Can you say "Soy Bien!"?</p>
+          <div className="card-actions justify-end">
+            <button className="btn btn-primary bg-purple-200 text-orange-500">Soy Bien!</button>
+          </div>
+        </div>
+        </div>
         {children}
       </body>
     </html>
