@@ -32,7 +32,7 @@ export default function RootLayout({
           </figure>
         <div className="card-body">
           <h2 className="card-title text-primary">D-D-D-D-D-Dora!</h2>
-          <p>Can you say Soy Bien!?</p>
+          <p>Can you say Soy Bien!?!</p>
           <div className="card-actions justify-end">
             <button className="btn btn-primary bg-purple-200 text-orange-500">Soy Bien!</button>
           </div>
