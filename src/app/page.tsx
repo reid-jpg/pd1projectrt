@@ -21,9 +21,9 @@ export default function HomePage() {
         {mockImages.map((image) => (
           <div key={image.id} className="w-48">
             <img src={image.url} />
-        </div>
+          </div>
         ))}
-        </div>
+      </div>
     </main>
   );
 }
