@@ -1,5 +1,13 @@
 import "~/styles/globals.css";
 
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/nextjs'
+
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 
@@ -13,6 +21,24 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
+    <ClerkProvider>
+    <html lang="en">
+      <body>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        {children}
+      </body>
+    </html>
+  </ClerkProvider>
+)
+}
+
+
+/*
     <html lang="en">
       <body className={`${GeistSans.variable}`}>
         <div className="text-rose-400 text-7xl text-center">First Layout</div>
@@ -43,3 +69,4 @@ export default function RootLayout({
     </html>
   );
 }
+*/
