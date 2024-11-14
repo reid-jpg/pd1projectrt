@@ -8,6 +8,8 @@ import {
   UserButton
 } from '@clerk/nextjs'
 
+import UploadThingButton from "./_components/button"
+
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 
@@ -23,11 +25,12 @@ export default function RootLayout({
   return (
     <ClerkProvider>
     <html lang="en">
-      <body>
+      <body className="font-serif text-pink-400">
         <SignedOut>
           <SignInButton />
         </SignedOut>
         <SignedIn>
+          <UploadThingButton />
           <UserButton />
         </SignedIn>
         {children}
