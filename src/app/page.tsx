@@ -24,7 +24,7 @@ export default async function HomePage() {
   return (
     <main className="cursor-grabbing bg-red-100">
       <div className="flex flex-wrap gap-4">
-        {images != null && images.map((image, index) => (
+        {images?.map((image, index) => (
           <div key={image.id} className="w-48 text-red-400">
             <img src={image.url} />
             <div>{image.name}</div>
